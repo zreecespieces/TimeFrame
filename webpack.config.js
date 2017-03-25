@@ -10,7 +10,7 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 
 module.exports = {
   context: path.join(__dirname, "src"),
-  devtool: debug ? "inline-sourcemap" : null,
+  devtool: debug ? "inline-sourcemap" : "cheap-module-source-map",
   entry: "./js/client.js",
   module: {
     loaders: [
@@ -30,7 +30,6 @@ module.exports = {
     filename: "client.min.js"
   },
   plugins: debug ? [HTMLWebpackPluginConfig] : [
-    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
     HTMLWebpackPluginConfig,
   ],
