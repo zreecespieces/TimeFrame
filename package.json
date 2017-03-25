@@ -4,7 +4,9 @@
   "description": "A Single Page Web Application that calculates and displays the total runtime of movies that have other movies nested inside of them at certain keywords.",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --content-base src --inline --hot",
+    "build": "webpack",
+    "production": "NODE_ENV=production webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,21 @@
   "bugs": {
     "url": "https://github.com/zreecespieces/Timeframe/issues"
   },
-  "homepage": "https://github.com/zreecespieces/Timeframe#readme"
+  "homepage": "https://github.com/zreecespieces/Timeframe#readme",
+  "dependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "html-webpack-plugin": "^2.28.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
+  }
 }
