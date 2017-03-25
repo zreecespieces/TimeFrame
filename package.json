@@ -1,0 +1,19 @@
+{
+  "name": "timeframe",
+  "version": "1.0.0",
+  "description": "A Single Page Web Application that calculates and displays the total runtime of movies that have other movies nested inside of them at certain keywords.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zreecespieces/Timeframe.git"
+  },
+  "author": "Zachary Reece, Elliott Harris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zreecespieces/Timeframe/issues"
+  },
+  "homepage": "https://github.com/zreecespieces/Timeframe#readme"
+}
