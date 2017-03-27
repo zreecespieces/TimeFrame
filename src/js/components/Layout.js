@@ -1,26 +1,10 @@
-import React from "react";
+var React = require("react");
+var ReactDOM = require("react-dom");
 
-import Footer from "./Footer";
-import Header from "./Header";
-
-export default class Layout extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      title: "Welcome",
-    };
+var Layout = React.createClass({
+  render: function() {
+    return <h1>Hello world!</h1>;
   }
+});
 
-  changeTitle(title) {
-    this.setState({title});
-  }
-
-  render() {
-    return (
-      <div>
-        <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />
-        <Footer />
-      </div>
-    );
-  }
-}
+module.exports = Layout;
