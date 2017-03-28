@@ -1,11 +1,11 @@
-/* line 3, ../sass/styles.scss */
+/* line 4, ../sass/styles.scss */
 body {
   background-color: #e74c3c;
   font-family: 'Open Sans', sans-serif;
 }
 
-/* line 8, ../sass/styles.scss */
+/* line 11, ../sass/styles.scss */
 #Title {
-  font-size: 100px;
   text-align: center;
+  word-wrap: normal;
 }

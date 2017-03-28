@@ -1,11 +1,16 @@
+//The main Timeframe red
 $red: #e74c3c;
 
 body {
+  //Sets the background color of the whole body to the main red
   background-color: $red;
+  //Sets the font of the whole body to the Open Sans font from Google Fonts
   font-family: 'Open Sans', sans-serif;
 }
 
 #Title {
-  font-size: 100px;
+  //Center aligns the texts inside of elements with an ID tag of Title
   text-align: center;
+  //Prevents word wrapping inside of elements with an ID tag of Title
+  word-wrap: normal;
 }
