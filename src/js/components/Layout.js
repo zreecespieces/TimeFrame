@@ -7,11 +7,9 @@ var Title = require("./Title");
 var Layout = React.createClass({
   render: function() {
     return (
-      //Render a Bootstrap row
+      //Render a Bootstrap row with one column, and inside the column render a Title component and pass it the pageTitle props with a value of Timeframe
       <div class="row">
-        //Render a Bootstrap column
         <div class="col-lg-12">
-          //Render a Title component and passes it the pageTitle props with a value of Timeframe
           <Title pageTitle="Timeframe"/>
         </div>
       </div>
