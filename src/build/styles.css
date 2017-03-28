@@ -7,4 +7,5 @@ body {
 /* line 8, ../sass/styles.scss */
 #Title {
   font-size: 100px;
+  text-align: center;
 }
