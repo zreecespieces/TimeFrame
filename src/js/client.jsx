@@ -3,7 +3,7 @@ var React = require("react");
 //Import the react-dom module
 var ReactDOM = require("react-dom");
 //Import the Layout component
-var Layout = require("./components/Layout");
+var Layout = require("./components/Layout.jsx");
 
 //Grab the DOM element with an ID of app as the node where all the components will render
 const app = document.getElementById('app');

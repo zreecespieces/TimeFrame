@@ -2,9 +2,10 @@
 body {
   background-color: #EA4B3E;
   font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
 }
 
-/* line 11, ../sass/styles.scss */
+/* line 13, ../sass/styles.scss */
 #Title {
   text-align: center;
   word-wrap: normal;
@@ -12,10 +13,12 @@ body {
   margin-top: 100px;
 }
 
-/* line 22, ../sass/styles.scss */
+/* line 24, ../sass/styles.scss */
 #mainJumbo {
   box-shadow: 0 0 10px black;
   margin-top: 150px;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
+  height: 100vh;
+  text-align: center;
 }

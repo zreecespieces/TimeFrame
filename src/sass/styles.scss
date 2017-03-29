@@ -6,6 +6,8 @@ body {
   background-color: $red;
   //Sets the font of the whole body to the Open Sans font from Google Fonts
   font-family: 'Open Sans', sans-serif;
+  //Prevents the jumbotron from creating scrollbars
+  overflow: hidden;
 }
 
 #Title {
@@ -27,4 +29,8 @@ body {
     //Removes bottom rounded corners
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
+    //Makes the jumbotron always fixed to the bottom of the page.
+    height: 100vh;
+    //Sets the text to be center aligned
+    text-align: center;
 }
