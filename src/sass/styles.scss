@@ -1,5 +1,5 @@
 //The main Timeframe red
-$red: #e74c3c;
+$red: #EA4B3E;
 
 body {
   //Sets the background color of the whole body to the main red
@@ -15,4 +15,8 @@ body {
   word-wrap: normal;
   //Sets the font size to 5em
   font-size: 5em;
+}
+
+#mainJumbo {
+    box-shadow: 0 0 10px black;
 }

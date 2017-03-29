@@ -1,5 +1,5 @@
 //Import the react module
-var React = require("react");
+var React = require('react');
 
 //Define a component class of Title
 var Title = React.createClass({
