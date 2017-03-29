@@ -9,9 +9,13 @@ body {
   text-align: center;
   word-wrap: normal;
   font-size: 5em;
+  margin-top: 100px;
 }
 
-/* line 20, ../sass/styles.scss */
+/* line 22, ../sass/styles.scss */
 #mainJumbo {
   box-shadow: 0 0 10px black;
+  margin-top: 150px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }

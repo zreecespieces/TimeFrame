@@ -15,8 +15,16 @@ body {
   word-wrap: normal;
   //Sets the font size to 5em
   font-size: 5em;
+  //Pushes the Title away from the top of the page
+  margin-top: 100px;
 }
 
 #mainJumbo {
+    //Adds a small black drop shadow around the main jumbotron
     box-shadow: 0 0 10px black;
+    //Pushes the jumbotron away from the Title
+    margin-top: 150px;
+    //Removes bottom rounded corners
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
