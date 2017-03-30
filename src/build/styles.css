@@ -22,3 +22,8 @@ body {
   height: 100vh;
   text-align: center;
 }
+
+/* line 39, ../sass/styles.scss */
+.red-text {
+  color: #EA4B3E;
+}

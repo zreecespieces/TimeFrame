@@ -34,3 +34,8 @@ body {
     //Sets the text to be center aligned
     text-align: center;
 }
+
+//Makes elements with the class red-text have a red font color
+.red-text {
+  color: $red;
+}
