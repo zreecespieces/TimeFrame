@@ -11,21 +11,18 @@ body {
 }
 
 #Title {
-  //Center aligns the texts inside of elements with an ID tag of Title
-  text-align: center;
-  //Prevents word wrapping inside of elements with an ID tag of Title
-  word-wrap: normal;
-  //Sets the font size to 5em
-  font-size: 5em;
-  //Pushes the Title away from the top of the page
-  margin-top: 100px;
+  //Prevent the image from scaling too big but make it responsive
+  max-width: 70%;
+  height: auto;
+  //Set the image in the center of the top of the screen
+  margin: 5% 10% 5% 16%
 }
 
 #mainJumbo {
     //Adds a small black drop shadow around the main jumbotron
     box-shadow: 0 0 10px black;
-    //Pushes the jumbotron away from the Title
-    margin-top: 150px;
+    //Clear's Title bottom margin
+    margin-top: 0px;
     //Removes bottom rounded corners
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;

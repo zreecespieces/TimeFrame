@@ -18,7 +18,7 @@ var Layout = React.createClass({
       <Grid>
         <Row>
           <Col lg={12}>
-            <Title pageTitle="Timeframe"/>
+            <Title/>
           </Col>
           <Col lg={12}>
             <JumbotronInstance/>
