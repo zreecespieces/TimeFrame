@@ -25,7 +25,7 @@ var Layout = React.createClass({
           </Col>
         </Row>
       </Grid>
-    )
+    );
   }
 });
 

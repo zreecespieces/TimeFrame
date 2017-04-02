@@ -11,7 +11,7 @@ var Sentence = React.createClass({
           Watching <span className="red-text">{this.props.movie1}</span>, but every time they say <span className="red-text">&#39;{this.props.keyword1}&#39;</span> it's replaced with <span className="red-text">{this.props.movie2}</span>, but every time they say <span className="red-text">&#39;{this.props.keyword2}&#39;</span> it's replaced with <span className="red-text">{this.props.movie3}</span> would take:
         </p>
       </div>
-    )
+    );
   }
 });
 

@@ -7,7 +7,7 @@ var Title = React.createClass({
     //Render a div with an ID of Title that is a Bootstrap responsive image
     return (
       <img className="img-responsive" src="/../img/title.png" alt="Timeframe" id="Title"/>
-    )
+    );
   }
 });
 
