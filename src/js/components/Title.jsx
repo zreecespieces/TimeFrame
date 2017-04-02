@@ -1,7 +1,5 @@
 //Import the react module
 var React = require('react');
-//Import the Clearfix Bootstrap Component
-var Clearfix = require('react-bootstrap/lib/Clearfix');
 
 //Define a component class of Title
 var Title = React.createClass({

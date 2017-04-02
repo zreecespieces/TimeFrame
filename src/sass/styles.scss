@@ -6,7 +6,7 @@ body {
   background-color: $red;
   //Sets the font of the whole body to the Open Sans font from Google Fonts
   font-family: 'Open Sans', sans-serif;
-  //Prevents the jumbotron from creating scrollbars
+  //Prevents scrollbars
   overflow: hidden;
 }
 
@@ -30,9 +30,31 @@ body {
     height: 100vh;
     //Sets the text to be center aligned
     text-align: center;
+    //Makes jumbotron scrollable
+    overflow-y: auto;
+    //Make the background color of the jumbotron white
+    background-color: white;
 }
 
 //Makes elements with the class red-text have a red font color
 .red-text {
   color: $red;
+}
+
+#movieAndKeyword {
+  background: transparent;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid $red;
+  -webkit-box-shadow: none;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.form-control {
+  font-size: 20px;
 }
