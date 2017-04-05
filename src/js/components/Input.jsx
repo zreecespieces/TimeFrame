@@ -14,11 +14,16 @@ var ControlLabel = require('react-bootstrap/lib/ControlLabel');
 //Define Input react component class
 var Input = React.createClass({
   getInitialState: function() {
-    return {value: ''}
+    return {movieValue: '',
+            keywordValue: ''}
   },
 
-  handleChange(e) {
-    this.setState({ value: e.target.value });
+  movieHandleChange(e) {
+    this.setState({ movieValue: e.target.value });
+  },
+
+  keywordHandleChange(e) {
+    this.setState({ keywordValue: e.target.value });
   },
 
   render: function() {
@@ -30,7 +35,7 @@ var Input = React.createClass({
               Movie
             </Col>
             <Col sm={4}>
-              <FormControl type="text" placeholder="Select movie" />
+              <FormControl type="text" value={this.state.movieValue} onChange={this.movieHandleChange} placeholder="Select movie" />
             </Col>
           </FormGroup>
 
@@ -39,7 +44,7 @@ var Input = React.createClass({
               Keyword
             </Col>
             <Col sm={4} smOffset={1}>
-              <FormControl type="text" placeholder="Enter keyword" />
+              <FormControl type="text" value={this.state.keywordValue} onChange={this.keywordHandleChange} placeholder="Enter keyword" />
             </Col>
           </FormGroup>
         </Form>
