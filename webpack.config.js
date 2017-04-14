@@ -11,7 +11,7 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 module.exports = {
   context: path.join(__dirname, "src"),
   devtool: debug ? "inline-sourcemap" : "cheap-module-source-map",
-  entry: "./js/client.jsx",
+  entry: "./client.jsx",
   module: {
     loaders: [
       {
@@ -26,7 +26,7 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname + "/src/build",
+    path: __dirname + "/src/static",
     filename: "client.min.js"
   },
   plugins: debug ? [HTMLWebpackPluginConfig] : [
