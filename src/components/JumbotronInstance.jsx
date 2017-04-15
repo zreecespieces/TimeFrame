@@ -19,7 +19,7 @@ var FormGroup = require('react-bootstrap/lib/FormGroup');
 var JumbotronInstance = React.createClass({
   //Defines the inital state of the component
   getInitialState: function () {
-    return { selectedAMovie: true,
+    return { selected: true,
              numberOfMovies: 2,
              movie1: "Antz",
              movie2: "Bee Movie",
@@ -45,7 +45,7 @@ var JumbotronInstance = React.createClass({
     //Define a variable to hold the content of the jumbotron
     var content;
     //If there is a movie selected...
-    if (this.state.selectedAMovie) {
+    if (this.state.selected) {
       //...then make the variable content hold this div
       content = (
         <div>
