@@ -3,13 +3,25 @@ var React = require('react');
 
 //Define Sentence stateless functional component class
 function Sentence(props) {
-  //Renders a div with a paragraph containing the dynamic sentence
+  var rows = [], i = 0, len = props.numberOfMovies;
+  while (++i <= len) rows.push(i);
+
   return (
-    <div>
-      <p>
-        Watching <span className="red-text">{props.movie1}</span>, but every time they say <span className="red-text">&#39;{props.keyword1}&#39;</span> it's replaced with <span className="red-text">{props.movie2}</span>, but every time they say <span className="red-text">&#39;{props.keyword2}&#39;</span> it's replaced with <span className="red-text">{props.movie3}</span> would take:
-      </p>
-    </div>
+    <p>
+      {"Watching "}
+      {rows.map(function (i) {
+        var movie = "props.movie" + i.toString();
+        var keyword = "props.keyword" + i.toString();
+        var lastWord;
+
+        if (i < props.numberOfMovies) {
+          lastWord = <span>{", but every time they say "}<span className="red-text">{"'" + eval(keyword) + "'"}</span>{" it's replaced with "}</span>;
+        }
+
+        return <span><span className="red-text">{eval(movie)}</span>{lastWord}</span>;
+      })}
+      {" would take:" }
+    </p>
   );
 }
 

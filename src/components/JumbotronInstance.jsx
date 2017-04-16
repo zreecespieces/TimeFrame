@@ -49,7 +49,7 @@ var JumbotronInstance = React.createClass({
       //...then make the variable content hold this div
       content = (
         <div>
-          <Sentence movie1={this.state.movie1} movie2={this.state.movie2} movie3={this.state.movie3} keyword1={this.state.keyword1} keyword2={this.state.keyword2}/>
+          <Sentence numberOfMovies={this.state.numberOfMovies} movie1={this.state.movie1} movie2={this.state.movie2} movie3={this.state.movie3} keyword1={this.state.keyword1} keyword2={this.state.keyword2}/>
           <br />
           <br />
           <Result years={6} months={5} days={4} hours={3} minutes={2} seconds={1}/>
