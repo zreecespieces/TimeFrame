@@ -24,8 +24,26 @@ var JumbotronInstance = React.createClass({
              movie1: "Antz",
              movie2: "Bee Movie",
              movie3: "Marmaduke",
+             movie4: "Transformers",
+             movie5: "Mr Poppins Penguins",
+             movie6: "Harry Potter",
+             movie7: "Lord of the Rings",
+             movie8: "Half Baked",
+             movie9: "Mad Max",
              keyword1: "ant",
-             keyword2: "bee"}; //Determines whether or not the user has started typing in a movie name
+             keyword2: "bee",
+             keyword3: "dog",
+             keyword4: "autobot",
+             keyword5: "penguins",
+             keyword6: "wizard",
+             keyword7: "elf",
+             keyword8: "weed",
+             years: 6,
+             months: 5,
+             days: 4,
+             hours: 3,
+             minutes: 2,
+             seconds: 1};
   },
 
   addLayer: function() {
@@ -49,10 +67,10 @@ var JumbotronInstance = React.createClass({
       //...then make the variable content hold this div
       content = (
         <div>
-          <Sentence numberOfMovies={this.state.numberOfMovies} movie1={this.state.movie1} movie2={this.state.movie2} movie3={this.state.movie3} keyword1={this.state.keyword1} keyword2={this.state.keyword2}/>
+          <Sentence numberOfMovies={this.state.numberOfMovies} movie1={this.state.movie1} movie2={this.state.movie2} movie3={this.state.movie3} movie4={this.state.movie4} movie5={this.state.movie5} movie6={this.state.movie6} movie7={this.state.movie7} movie8={this.state.movie8} movie9={this.state.movie9} keyword1={this.state.keyword1} keyword2={this.state.keyword2} keyword3={this.state.keyword3} keyword4={this.state.keyword4} keyword5={this.state.keyword5} keyword6={this.state.keyword6} keyword7={this.state.keyword7} keyword8={this.state.keyword8}/>
           <br />
           <br />
-          <Result years={6} months={5} days={4} hours={3} minutes={2} seconds={1}/>
+          <Result years={this.state.years} months={this.state.months} days={this.state.days} hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds}/>
           <br />
           <br />
           <br />
