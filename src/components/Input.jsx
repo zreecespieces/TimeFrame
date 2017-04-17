@@ -44,7 +44,7 @@ var Input = React.createClass({
               Keyword
             </Col>
             <Col sm={4} smOffset={1}>
-              <FormControl type="text" value={this.state.keywordValue} onChange={this.keywordHandleChange} placeholder="Enter keyword" />
+              <FormControl type="text" value={this.state.keywordValue} onClick={this.props.handleSelected} onChange={this.keywordHandleChange} placeholder="Enter keyword" />
             </Col>
           </FormGroup>
         </Form>

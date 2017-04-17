@@ -11,23 +11,21 @@ var Row = require('react-bootstrap/lib/Row');
 //Import the Col Bootstrap Component
 var Col = require('react-bootstrap/lib/Col');
 
-//Define a component class named Layout, which will hold all the components for our app
-var Layout = React.createClass({
-  render: function() {
-    return (
-      <Grid>
-        <Row>
-          <Col lg={12}>
-            <Title/>
-          </Col>
-          <Col lg={12}>
-            <JumbotronInstance/>
-          </Col>
-        </Row>
-      </Grid>
-    );
-  }
-});
+//Define a stateless functional component named Layout, which will hold all the components for our app
+function Layout() {
+  return (
+    <Grid>
+      <Row>
+        <Col lg={12}>
+          <Title/>
+        </Col>
+        <Col lg={12}>
+          <JumbotronInstance/>
+        </Col>
+      </Row>
+    </Grid>
+  );
+}
 
 //Export the Layout component class
 module.exports = Layout;
