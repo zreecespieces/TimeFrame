@@ -15,10 +15,10 @@ function Sentence(props) {
         var lastWord;
 
         if (i < props.numberOfMovies) {
-          lastWord = <span>{", but every time they say "}<span className="red-text">{"'" + eval(keyword) + "'"}</span>{" it's replaced with "}</span>;
+          lastWord = <span key={i} >{", but every time they say "}<span className="red-text">{"'" + eval(keyword) + "'"}</span>{" it's replaced with "}</span>;
         }
 
-        return <span><span className="red-text">{eval(movie)}</span>{lastWord}</span>;
+        return <span key={i} ><span className="red-text">{eval(movie)}</span>{lastWord}</span>;
       })}
       {" would take:" }
     </p>
