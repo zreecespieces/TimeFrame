@@ -5,6 +5,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var React = require('react');
 var ReactDOMServer = require('react-dom/server');
+var runtimes = require('./static/js/runtimes');
 var Layout = require('./components/Layout');
 var app = express();
 
@@ -19,6 +20,10 @@ app.get('/', function(req, res) {
   var markup = ReactDOMServer.renderToString(< Layout />);
   res.render("index", { markup: markup });
 });
+
+app.post('/result', function(req, res) {
+  runtimes.times(req, res);
+})
 
 app.listen(8080, function() {
   console.log('Server Started');

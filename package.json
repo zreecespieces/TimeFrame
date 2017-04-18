@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/zreecespieces/Timeframe#readme",
   "dependencies": {
+    "async": "^2.3.0",
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
     "babel-plugin-add-module-exports": "^0.2.1",
@@ -31,10 +32,10 @@
     "body-parser": "^1.17.1",
     "ejs": "^2.5.6",
     "html-webpack-plugin": "^2.28.0",
-    "node-jsx": "^0.13.3",
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.8",
     "react-dom": "^15.4.2",
+    "sanitize-html": "^1.14.1",
     "webpack": "^2.3.2",
     "webpack-dev-server": "^2.4.2"
   }

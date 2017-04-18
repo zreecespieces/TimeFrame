@@ -23,7 +23,7 @@ function Input(props) {
 
   return (
     <div>
-      <Form inline>
+      <Form inline method="post" action="/result">
         <FormGroup controlId="movieAndKeyword">
           <Col componentClass={ControlLabel} sm={2}>
             Movie
