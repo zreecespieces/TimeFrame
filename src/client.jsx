@@ -8,4 +8,8 @@ var Layout = require("./components/Layout.jsx");
 //Grab the DOM element with an ID of app as the node where all the components will render
 const app = document.getElementById('app');
 //Render the application to the DOM
-ReactDOM.render(<Layout/>, app);
+if (typeof window !== "undefined") {
+  window.onload = function() {
+    ReactDOM.render(<Layout/>, app);
+  };
+}

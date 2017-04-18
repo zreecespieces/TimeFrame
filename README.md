@@ -4,4 +4,7 @@ A Single Page Web Application that calculates and displays the total runtime of 
 To run:
 
 npm i -g babel-node
-babel-node src/server.js 
+
+webpack
+
+babel-node src/server.js
