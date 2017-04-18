@@ -11,48 +11,39 @@ var Col = require('react-bootstrap/lib/Col');
 //Import the ControlLabel Bootstrap Component
 var ControlLabel = require('react-bootstrap/lib/ControlLabel');
 
-//Define Input react component class
-var Input = React.createClass({
-  getInitialState: function() {
-    return {movieValue: '',
-            keywordValue: ''}
-  },
+//Define Input stateless functional component class
+function Input(props) {
 
-  movieHandleChange(e) {
-    this.setState({ movieValue: e.target.value });
-  },
+  var layerNumber = props.layerNumber;
 
-  keywordHandleChange(e) {
-    this.setState({ keywordValue: e.target.value });
-  },
+  var movie = eval( "props.movie" + layerNumber.toString() );
+  var keyword = eval( "props.keyword" + layerNumber.toString() );
 
-  render: function() {
-    return (
-      <div>
-        <Form inline>
-          <FormGroup controlId="movieAndKeyword">
-            <Col componentClass={ControlLabel} sm={2}>
-              Movie
-            </Col>
-            <Col sm={4}>
-              <FormControl type="text" value={this.state.movieValue} onChange={this.movieHandleChange} placeholder="Select movie" />
-            </Col>
-          </FormGroup>
+  return (
+    <div>
+      <Form inline>
+        <FormGroup controlId="movieAndKeyword">
+          <Col componentClass={ControlLabel} sm={2}>
+            Movie
+          </Col>
+          <Col sm={4}>
+            <FormControl type="text" onChange={props.changeMovie} value={movie} placeholder="Select movie" />
+          </Col>
+        </FormGroup>
 
-          <FormGroup controlId="movieAndKeyword">
-            <Col componentClass={ControlLabel} sm={2}>
-              Keyword
-            </Col>
-            <Col sm={4} smOffset={1}>
-              <FormControl type="text" value={this.state.keywordValue} onClick={this.props.handleSelected} onChange={this.keywordHandleChange} placeholder="Enter keyword" />
-            </Col>
-          </FormGroup>
-        </Form>
-        <br/>
-      </div>
-    );
-  }
-});
+        <FormGroup controlId="movieAndKeyword">
+          <Col componentClass={ControlLabel} sm={2}>
+            Keyword
+          </Col>
+          <Col sm={4} smOffset={1}>
+            <FormControl type="text" onChange={props.changeKeyword} value={keyword} placeholder="Enter keyword" />
+          </Col>
+        </FormGroup>
+      </Form>
+      <br/>
+    </div>
+  );
+}
 
 //Export the Input component class
 module.exports = Input;
