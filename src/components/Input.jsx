@@ -29,7 +29,7 @@ function Input(props) {
             Movie
           </Col>
           <Col sm={4}>
-            <FormControl type="text" onChange={props.changeMovie} name={movie} value={movieValue} placeholder="Select movie" />
+            <FormControl type="text" onChange={props.changeMovieOrKeyword} name={movie} value={movieValue} placeholder="Select movie" />
           </Col>
         </FormGroup>
 
@@ -38,7 +38,7 @@ function Input(props) {
             Keyword
           </Col>
           <Col sm={4} smOffset={1}>
-            <FormControl type="text" onChange={props.changeKeyword} name={keyword} value={keywordValue} placeholder="Enter keyword" />
+            <FormControl type="text" onChange={props.changeMovieOrKeyword} name={keyword} value={keywordValue} placeholder="Enter keyword" />
           </Col>
         </FormGroup>
       </Form>

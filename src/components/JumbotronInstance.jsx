@@ -55,13 +55,7 @@ var JumbotronInstance = React.createClass({
     this.setState({numberOfMovies: newCount });
   },
 
-  changeMovie: function(e) {
-    var movie = "movie";
-    this.setState({[e.target.name]: e.target.value});
-  },
-
-  changeKeyword: function(e) {
-    var keyword = "keyword";
+  changeMovieOrKeyword: function(e) {
     this.setState({[e.target.name]: e.target.value});
   },
 
@@ -83,7 +77,7 @@ var JumbotronInstance = React.createClass({
               <br />
               <FormGroup>
                 {rows.map(function (i) {
-                  return <Input changeMovie={this.changeMovie} changeKeyword={this.changeKeyword} layerNumber={i} key={i} movie1={this.state.movie1} movie2={this.state.movie2} movie3={this.state.movie3} movie4={this.state.movie4} movie5={this.state.movie5} movie6={this.state.movie6} movie7={this.state.movie7} movie8={this.state.movie8} movie9={this.state.movie9} keyword1={this.state.keyword1} keyword2={this.state.keyword2} keyword3={this.state.keyword3} keyword4={this.state.keyword4} keyword5={this.state.keyword5} keyword6={this.state.keyword6} keyword7={this.state.keyword7} keyword8={this.state.keyword8} />;
+                  return <Input changeMovieOrKeyword={this.changeMovieOrKeyword} layerNumber={i} key={i} movie1={this.state.movie1} movie2={this.state.movie2} movie3={this.state.movie3} movie4={this.state.movie4} movie5={this.state.movie5} movie6={this.state.movie6} movie7={this.state.movie7} movie8={this.state.movie8} movie9={this.state.movie9} keyword1={this.state.keyword1} keyword2={this.state.keyword2} keyword3={this.state.keyword3} keyword4={this.state.keyword4} keyword5={this.state.keyword5} keyword6={this.state.keyword6} keyword7={this.state.keyword7} keyword8={this.state.keyword8} />;
                 }, this)}
               </FormGroup>
               <InputButtons addLayer={this.addLayer} removeLayer={this.removeLayer} numberOfMovies={this.state.numberOfMovies}/>
