@@ -58,12 +58,12 @@ var JumbotronInstance = React.createClass({
 
   changeMovie: function(e) {
     var movie = "movie";
-    this.setState({movie1: e.target.value});
+    this.setState({[e.target.name]: e.target.value});
   },
 
   changeKeyword: function(e) {
     var keyword = "keyword";
-    this.setState({keyword1: e.target.value});
+    this.setState({[e.target.name]: e.target.value});
   },
 
   render: function() {
