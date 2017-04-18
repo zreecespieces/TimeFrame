@@ -19,8 +19,7 @@ var FormGroup = require('react-bootstrap/lib/FormGroup');
 var JumbotronInstance = React.createClass({
   //Defines the inital state of the component
   getInitialState: function () {
-    return { selected: true,
-             numberOfMovies: 2,
+    return { numberOfMovies: 2,
              movie1: "Antz",
              movie2: "Bee Movie",
              movie3: "Marmaduke",
@@ -70,52 +69,25 @@ var JumbotronInstance = React.createClass({
     //Determine how many Movie/Keyword layers to render
     var rows = [], i = 0, len = this.state.numberOfMovies;
     while (++i <= len) rows.push(i);
-    //Define a variable to hold the content of the jumbotron
-    var content;
-    //If there is a movie selected...
-    if (this.state.selected) {
-      //...then make the variable content hold this div
-      content = (
-        <div>
-          <Sentence numberOfMovies={this.state.numberOfMovies} movie1={this.state.movie1} movie2={this.state.movie2} movie3={this.state.movie3} movie4={this.state.movie4} movie5={this.state.movie5} movie6={this.state.movie6} movie7={this.state.movie7} movie8={this.state.movie8} movie9={this.state.movie9} keyword1={this.state.keyword1} keyword2={this.state.keyword2} keyword3={this.state.keyword3} keyword4={this.state.keyword4} keyword5={this.state.keyword5} keyword6={this.state.keyword6} keyword7={this.state.keyword7} keyword8={this.state.keyword8}/>
-          <br />
-          <br />
-          <Result years={this.state.years} months={this.state.months} days={this.state.days} hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds}/>
-          <br />
-          <br />
-          <br />
-          <br />
-          <FormGroup>
-            {rows.map(function (i) {
-              return <Input changeMovie={this.changeMovie} changeKeyword={this.changeKeyword} layerNumber={i} key={i} movie1={this.state.movie1} movie2={this.state.movie2} movie3={this.state.movie3} movie4={this.state.movie4} movie5={this.state.movie5} movie6={this.state.movie6} movie7={this.state.movie7} movie8={this.state.movie8} movie9={this.state.movie9} keyword1={this.state.keyword1} keyword2={this.state.keyword2} keyword3={this.state.keyword3} keyword4={this.state.keyword4} keyword5={this.state.keyword5} keyword6={this.state.keyword6} keyword7={this.state.keyword7} keyword8={this.state.keyword8} />;
-            }, this)}
-          </FormGroup>
-          <InputButtons addLayer={this.addLayer} removeLayer={this.removeLayer} numberOfMovies={this.state.numberOfMovies}/>
-        </div>
-      );
-    }
-    //Otherwise make the variable content variable an instance of the Instructions component
-    else {
-      content = (
-        <div>
-          <Instructions />
-          <br />
-          <br />
-          <br />
-          <br />
-          <FormGroup>
-            {rows.map(function (i) {
-              return <Input key={i} />;
-            })}
-          </FormGroup>
-          <InputButtons numberOfMovies={this.state.numberOfMovies} addLayer={this.addLayer} removeLayer={this.removeLayer}/>
-        </div>
-      );
-    }
     //Render a div with an ID of mainJumbo, with the contents being a Bootstrap Jumbotron holding the variable content
     return (
       <Jumbotron id="mainJumbo">
-        {content}
+            <div>
+              <Sentence numberOfMovies={this.state.numberOfMovies} movie1={this.state.movie1} movie2={this.state.movie2} movie3={this.state.movie3} movie4={this.state.movie4} movie5={this.state.movie5} movie6={this.state.movie6} movie7={this.state.movie7} movie8={this.state.movie8} movie9={this.state.movie9} keyword1={this.state.keyword1} keyword2={this.state.keyword2} keyword3={this.state.keyword3} keyword4={this.state.keyword4} keyword5={this.state.keyword5} keyword6={this.state.keyword6} keyword7={this.state.keyword7} keyword8={this.state.keyword8}/>
+              <br />
+              <br />
+              <Result years={this.state.years} months={this.state.months} days={this.state.days} hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds}/>
+              <br />
+              <br />
+              <br />
+              <br />
+              <FormGroup>
+                {rows.map(function (i) {
+                  return <Input changeMovie={this.changeMovie} changeKeyword={this.changeKeyword} layerNumber={i} key={i} movie1={this.state.movie1} movie2={this.state.movie2} movie3={this.state.movie3} movie4={this.state.movie4} movie5={this.state.movie5} movie6={this.state.movie6} movie7={this.state.movie7} movie8={this.state.movie8} movie9={this.state.movie9} keyword1={this.state.keyword1} keyword2={this.state.keyword2} keyword3={this.state.keyword3} keyword4={this.state.keyword4} keyword5={this.state.keyword5} keyword6={this.state.keyword6} keyword7={this.state.keyword7} keyword8={this.state.keyword8} />;
+                }, this)}
+              </FormGroup>
+              <InputButtons addLayer={this.addLayer} removeLayer={this.removeLayer} numberOfMovies={this.state.numberOfMovies}/>
+            </div>
       </Jumbotron>
     );
   }
