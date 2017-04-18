@@ -21,28 +21,55 @@ function Input(props) {
   var movieValue = eval( "props.movie" + layerNumber.toString() );
   var keywordValue = eval( "props.keyword" + layerNumber.toString() );
 
+  var content;
+
+  if (layerNumber == props.numberOfMovies) {
+    content = (
+      <span>
+        <Form inline>
+          <FormGroup controlId="movieAndKeyword">
+            <Col componentClass={ControlLabel} sm={2}>
+              Movie
+            </Col>
+            <Col sm={4}>
+              <FormControl type="text" onChange={props.changeMovieOrKeyword} name={movie} value={movieValue} placeholder="Select movie" />
+            </Col>
+          </FormGroup>
+        </Form>
+        <br/>
+      </span>
+    );
+  }
+  else {
+    content = (
+      <span>
+        <Form inline>
+          <FormGroup controlId="movieAndKeyword">
+            <Col componentClass={ControlLabel} sm={2}>
+              Movie
+            </Col>
+            <Col sm={4}>
+              <FormControl type="text" onChange={props.changeMovieOrKeyword} name={movie} value={movieValue} placeholder="Select movie" />
+            </Col>
+          </FormGroup>
+
+          <FormGroup controlId="movieAndKeyword">
+            <Col componentClass={ControlLabel} sm={2}>
+              Keyword
+            </Col>
+            <Col sm={4} smOffset={1}>
+              <FormControl type="text" onChange={props.changeMovieOrKeyword} name={keyword} value={keywordValue} placeholder="Enter keyword" />
+            </Col>
+          </FormGroup>
+        </Form>
+        <br/>
+      </span>
+    );
+  }
+
   return (
     <div>
-      <Form inline method="post" action="/result">
-        <FormGroup controlId="movieAndKeyword">
-          <Col componentClass={ControlLabel} sm={2}>
-            Movie
-          </Col>
-          <Col sm={4}>
-            <FormControl type="text" onChange={props.changeMovieOrKeyword} name={movie} value={movieValue} placeholder="Select movie" />
-          </Col>
-        </FormGroup>
-
-        <FormGroup controlId="movieAndKeyword">
-          <Col componentClass={ControlLabel} sm={2}>
-            Keyword
-          </Col>
-          <Col sm={4} smOffset={1}>
-            <FormControl type="text" onChange={props.changeMovieOrKeyword} name={keyword} value={keywordValue} placeholder="Enter keyword" />
-          </Col>
-        </FormGroup>
-      </Form>
-      <br/>
+      {content}
     </div>
   );
 }
