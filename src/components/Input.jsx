@@ -1,5 +1,7 @@
 //Import the react module
 var React = require('react');
+//Import the SubmitButton component
+var SubmitButton = require('./SubmitButton.jsx');
 //Import the Form Bootstrap component
 var Form = require('react-bootstrap/lib/Form');
 //Import the FormGroup Bootstrap component
@@ -28,11 +30,16 @@ function Input(props) {
       <span>
         <Form inline>
           <FormGroup controlId="movieAndKeyword">
-            <Col componentClass={ControlLabel} sm={2}>
+            <Col componentClass={ControlLabel} sm={2} smPull={5} >
               Movie
             </Col>
-            <Col sm={4}>
+            <Col sm={4} smPull={5} >
               <FormControl type="text" onChange={props.changeMovieOrKeyword} name={movie} value={movieValue} placeholder="Select movie" />
+            </Col>
+          </FormGroup>
+          <FormGroup>
+            <Col sm={4} smPull={4} >
+              <SubmitButton />
             </Col>
           </FormGroup>
         </Form>
