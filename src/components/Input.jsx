@@ -28,7 +28,7 @@ function Input(props) {
   if (layerNumber == props.numberOfMovies) {
     content = (
       <span>
-        <Form inline>
+        <Form onSubmit={props.handleSubmit} inline>
           <FormGroup controlId="movieAndKeyword">
             <Col componentClass={ControlLabel} sm={2} smPull={5} >
               Movie
