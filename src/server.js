@@ -14,7 +14,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname)));
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', function(req, res) {
   var markup = ReactDOMServer.renderToString(< Layout />);
@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
 });
 
 app.post('/result', function(req, res) {
-  runtimes.times(req, res);
+  runtimes.times(req, res, req.body.numberOfMovies);
 })
 
 app.listen(8080, function() {

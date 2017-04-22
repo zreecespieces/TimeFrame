@@ -19,8 +19,6 @@ function calcTime(timeArr, countsArr) {
     	  totalRuntime = (totalRuntime * layerKeywordCount[count]) + layerRuntimes[count + 1];
       }
      console.log(totalRuntime);
-     console.log(timeArr);
-     console.log(countsArr);
   }
 
 }

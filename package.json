@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "production": "NODE_ENV=production webpack",
-    "dev": "NODE_ENV=production webpack-dev-server --content-base src --inline --hot"
+    "dev": "babel-node src/server.js"
   },
   "repository": {
     "type": "git",
