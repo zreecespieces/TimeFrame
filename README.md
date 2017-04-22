@@ -5,6 +5,6 @@ To run:
 
 npm i -g babel-node
 
-webpack
+npm run build
 
-babel-node src/server.js
+npm run dev
