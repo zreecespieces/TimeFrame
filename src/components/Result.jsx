@@ -7,7 +7,7 @@ function Result(props) {
   return (
     <div>
       <p>
-        <span className="red-text">{props.years}</span> Years <span className="red-text">{props.months}</span> Months <span className="red-text">{props.days}</span> Days <span className="red-text">{props.hours}</span> Hours <span className="red-text">{props.minutes}</span> Minutes <span className="red-text">{props.seconds}</span> Seconds
+        <span className="red-text">{props.years}</span> Years <span className="red-text">{props.days}</span> Days <span className="red-text">{props.hours}</span> Hours <span className="red-text">{props.minutes}</span> Minutes
       </p>
     </div>
   );

@@ -35,12 +35,10 @@ var JumbotronInstance = React.createClass({
              keyword6: "",
              keyword7: "",
              keyword8: "",
-             years: 6,
-             months: 5,
-             days: 4,
-             hours: 3,
-             minutes: 2,
-             seconds: 1};
+             years: 4,
+             days: 3,
+             hours: 2,
+             minutes: 1};
   },
 
   addLayer: function() {
@@ -98,7 +96,7 @@ var JumbotronInstance = React.createClass({
               <Sentence numberOfMovies={this.state.numberOfMovies} movie1={this.state.movie1} movie2={this.state.movie2} movie3={this.state.movie3} movie4={this.state.movie4} movie5={this.state.movie5} movie6={this.state.movie6} movie7={this.state.movie7} movie8={this.state.movie8} movie9={this.state.movie9} keyword1={this.state.keyword1} keyword2={this.state.keyword2} keyword3={this.state.keyword3} keyword4={this.state.keyword4} keyword5={this.state.keyword5} keyword6={this.state.keyword6} keyword7={this.state.keyword7} keyword8={this.state.keyword8}/>
               <br />
               <br />
-              <Result years={this.state.years} months={this.state.months} days={this.state.days} hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds}/>
+              <Result years={this.state.years} days={this.state.days} hours={this.state.hours} minutes={this.state.minutes} />
               <br />
               <br />
               <br />
