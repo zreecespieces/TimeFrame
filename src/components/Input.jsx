@@ -1,7 +1,5 @@
 //Import the react module
 var React = require('react');
-//Import the SubmitButton component
-var SubmitButton = require('./SubmitButton.jsx');
 //Import the Form Bootstrap component
 var Form = require('react-bootstrap/lib/Form');
 //Import the FormGroup Bootstrap component
@@ -12,6 +10,10 @@ var FormControl = require('react-bootstrap/lib/FormControl');
 var Col = require('react-bootstrap/lib/Col');
 //Import the ControlLabel Bootstrap Component
 var ControlLabel = require('react-bootstrap/lib/ControlLabel');
+//Import the ButtonToolbar bootstrap component
+var ButtonToolbar = require('react-bootstrap/lib/ButtonToolbar');
+//Import the InputButtons component
+var InputButtons = require('./InputButtons.jsx');
 
 //Define Input stateless functional component class
 function Input(props) {
@@ -30,18 +32,19 @@ function Input(props) {
       <span>
         <Form onSubmit={props.handleSubmit} inline>
           <FormGroup controlId="movieAndKeyword">
-            <Col componentClass={ControlLabel} sm={2} smPull={5} >
+            <Col componentClass={ControlLabel} sm={2} >
               Movie
             </Col>
-            <Col sm={4} smPull={5} >
+            <Col sm={4} >
               <FormControl type="text" onChange={props.changeMovieOrKeyword} name={movie} value={movieValue} placeholder="Select movie" />
             </Col>
           </FormGroup>
-          <FormGroup>
-            <Col sm={4} smPull={4} >
-              <SubmitButton />
-            </Col>
-          </FormGroup>
+          <br/>
+          <Col sm={4} >
+            <ButtonToolbar>
+              <InputButtons addLayer={props.addLayer} removeLayer={props.removeLayer} numberOfMovies={props.numberOfMovies}/>
+            </ButtonToolbar>
+          </Col>
         </Form>
         <br/>
       </span>
