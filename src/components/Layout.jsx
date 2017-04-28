@@ -12,7 +12,7 @@ var Row = require('react-bootstrap/lib/Row');
 var Col = require('react-bootstrap/lib/Col');
 
 //Define a stateless functional component named Layout, which will hold all the components for our app
-function Layout() {
+function Layout(props) {
   return (
     <Grid>
       <Row>
@@ -20,7 +20,7 @@ function Layout() {
           <Title/>
         </Col>
         <Col lg={12}>
-          <JumbotronInstance/>
+          <JumbotronInstance years={props.years} days={props.days} hours={props.hours} minutes={props.minutes}/>
         </Col>
       </Row>
     </Grid>

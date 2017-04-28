@@ -17,13 +17,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', function(req, res) {
-  var markup = ReactDOMServer.renderToString(< Layout />);
+  var props = { years: 4, days: 3, hours: 2, minutes: 1 };
+  var markup = ReactDOMServer.renderToString(
+    React.createElement(Layout, props)
+  );
   res.render("index", { markup: markup });
 });
 
 app.post('/result', function(req, res) {
   runtimes.times(req, res, req.body.numberOfMovies);
-})
+});
 
 app.listen(8080, function() {
   console.log('Server Started');

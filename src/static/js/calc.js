@@ -1,3 +1,5 @@
+var converter = require('./converter');
+
 function calcTime(timeArr, countsArr) {
 
   var movieNotFound;
@@ -18,7 +20,8 @@ function calcTime(timeArr, countsArr) {
     for (var count = 1; count < timeArr.length - 1; count++) {
     	  totalRuntime = (totalRuntime * layerKeywordCount[count]) + layerRuntimes[count + 1];
       }
-     console.log(totalRuntime);
+     var convertedTime = converter(totalRuntime, 'min')
+     console.log(convertedTime);
   }
 
 }

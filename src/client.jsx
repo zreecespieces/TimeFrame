@@ -10,6 +10,10 @@ const app = document.getElementById('app');
 //Render the application to the DOM
 if (typeof window !== "undefined") {
   window.onload = function() {
-    ReactDOM.render(<Layout/>, app);
+    var props = window.PROPS;
+    ReactDOM.render(
+      React.createElement(Layout, props),
+      app
+    );
   };
 }
