@@ -4,6 +4,7 @@ var React = require('react');
 var Button = require('react-bootstrap/lib/Button');
 
 function SubmitButton(props) {
+  //Returns a React-Bootstrap submit button with the word 'submit' inside of it
   return (
     <Button bsSize="small" type='submit'>
       Submit
@@ -11,5 +12,5 @@ function SubmitButton(props) {
   );
 }
 
-//Export the SubmitButton stateless functional component
+//Export the SubmitButton stateless functional component class
 module.exports = SubmitButton;

@@ -9,5 +9,5 @@ function Title() {
   );
 }
 
-//Export the Title component class
+//Export the Title statless functional component class
 module.exports = Title;

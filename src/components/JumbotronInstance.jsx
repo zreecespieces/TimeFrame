@@ -1,7 +1,5 @@
 //Import the react module
 var React = require('react');
-//Import the Instructions component
-var Instructions = require('./Instructions.jsx');
 //Import the Result component
 var Result = require('./Result.jsx');
 //Import the Sentence component
@@ -15,7 +13,7 @@ var FormGroup = require('react-bootstrap/lib/FormGroup');
 
 //Define a component class of JumbotronInstance
 var JumbotronInstance = React.createClass({
-  //Defines the inital state of the component
+  //Defines the inital state of the component. This contains all possible movies and keywords with blank placeholders
   getInitialState: function () {
     return { numberOfMovies: 2,
              movie1: "Interstellar",
@@ -34,27 +32,23 @@ var JumbotronInstance = React.createClass({
              keyword5: "",
              keyword6: "",
              keyword7: "",
-             keyword8: "",
-             years: 4,
-             days: 3,
-             hours: 2,
-             minutes: 1};
+             keyword8: ""};
   },
-
+  //Define a function which will increment the number of movies by one
   addLayer: function() {
     var newCount = this.state.numberOfMovies + 1;
     this.setState({numberOfMovies: newCount });
   },
-
+  //Define a function which will decrement the number of movies by one
   removeLayer: function() {
     var newCount = this.state.numberOfMovies - 1;
     this.setState({numberOfMovies: newCount });
   },
-
+  //Define a funciton which will change the state of the specified name to the specified value contained by the input element. In other words, this function changes whatever movie or keyword in state to whatever the edited movie's or keyword's value currently is
   changeMovieOrKeyword: function(e) {
     this.setState({[e.target.name]: e.target.value});
   },
-
+  //Define a function which will submit all the current field values to the server for the computation to be made
   handleSubmit: function() {
     fetch('/result', {
       method: 'POST',
@@ -86,10 +80,10 @@ var JumbotronInstance = React.createClass({
   },
 
   render: function() {
-    //Determine how many Movie/Keyword layers to render
+    //Create an array of numbers corresponding to the current number of movies selected
     var rows = [], i = 0, len = this.state.numberOfMovies;
     while (++i <= len) rows.push(i);
-    //Render a div with an ID of mainJumbo, with the contents being a Bootstrap Jumbotron holding the variable content
+    //Render a div with an ID of mainJumbo, with the contents being a Bootstrap Jumbotron holding the variable content. First it displays the dynamic sentence based on what the user has typed in, followed by the result of the computation which is being fed here from the server. Then return all the necessary input fields based on the number of movies selected. Lastly, run a script which grabs the result and sets it as the new props.
     return (
       <Jumbotron id="mainJumbo">
             <div>
@@ -115,5 +109,5 @@ var JumbotronInstance = React.createClass({
   }
 });
 
-//Export the JumbotronInstance component class
+//Export the JumbotronInstance stateless functional component class
 module.exports = JumbotronInstance;

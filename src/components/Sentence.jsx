@@ -3,9 +3,10 @@ var React = require('react');
 
 //Define Sentence stateless functional component class
 function Sentence(props) {
+  //Create an array of numbers corresponding to the current number of movies selected
   var rows = [], i = 0, len = props.numberOfMovies;
   while (++i <= len) rows.push(i);
-
+  //Return a paragraph that changes based on the number of movies selected. This displays all the current movies and their associated keywords in the style of a spoken sentence.
   return (
     <p>
       {"Watching "}
@@ -25,5 +26,5 @@ function Sentence(props) {
   );
 }
 
-//Export the Sentence component class
+//Export the Sentence statless functional component class
 module.exports = Sentence;

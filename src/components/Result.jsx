@@ -3,7 +3,8 @@ var React = require('react');
 
 //Define the stateless functional component Result
 function Result(props) {
-  //Render the total time it would take for the given combination and present it in the form Y Years M Months D Days H Hours M Minutes S Seconds
+  //Render the total time it would take for the given combination and present it in the form Y Years D Days H Hours M Minutes
+  //Information is displayed based on the props this component is fed when rendered.
   return (
     <div>
       <p>
@@ -13,5 +14,5 @@ function Result(props) {
   );
 }
 
-//Export the Result component class
+//Export the Result statless functional component class
 module.exports = Result;
