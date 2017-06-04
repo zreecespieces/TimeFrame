@@ -14,7 +14,7 @@ var title9;
 
 function times(req, res, int) {
   var runtime1 = function(callback) {
-    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie1, function (err, response, body) {
+    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie1 + '&apikey=eb9fc4d2', function (err, response, body) {
       var result = JSON.parse(body).Runtime.replace(/\D/g,'');
       title1 = JSON.parse(body).Title
       callback(err, result)
@@ -22,7 +22,7 @@ function times(req, res, int) {
   }
 
   var runtime2 = function(callback) {
-    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie2, function (err, response, body) {
+    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie2 + '&apikey=eb9fc4d2', function (err, response, body) {
       var result = JSON.parse(body).Runtime.replace(/\D/g,'');
       title2 = JSON.parse(body).Title
       callback(err, result)
@@ -30,7 +30,7 @@ function times(req, res, int) {
   }
 
   function runtime3(callback) {
-    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie3, function (err, response, body) {
+    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie3 + '&apikey=eb9fc4d2', function (err, response, body) {
       var result = JSON.parse(body).Runtime.replace(/\D/g,'');
       title3 = JSON.parse(body).Title
       callback(err, result)
@@ -38,7 +38,7 @@ function times(req, res, int) {
   }
 
   function runtime4(callback) {
-    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie4, function (err, response, body) {
+    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie4 + '&apikey=eb9fc4d2', function (err, response, body) {
       var result = JSON.parse(body).Runtime.replace(/\D/g,'');
       title4 = JSON.parse(body).Title
       callback(err, result)
@@ -46,7 +46,7 @@ function times(req, res, int) {
   }
 
   function runtime5(callback) {
-    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie5, function (err, response, body) {
+    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie5 + '&apikey=eb9fc4d2', function (err, response, body) {
       var result = JSON.parse(body).Runtime.replace(/\D/g,'');
       title4 = JSON.parse(body).Title
       callback(err, result)
@@ -54,7 +54,7 @@ function times(req, res, int) {
   }
 
   function runtime6(callback) {
-    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie6, function (err, response, body) {
+    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie6 + '&apikey=eb9fc4d2', function (err, response, body) {
       var result = JSON.parse(body).Runtime.replace(/\D/g,'');
       title4 = JSON.parse(body).Title
       callback(err, result)
@@ -62,7 +62,7 @@ function times(req, res, int) {
   }
 
   function runtime7(callback) {
-    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie7, function (err, response, body) {
+    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie7 + '&apikey=eb9fc4d2', function (err, response, body) {
       var result = JSON.parse(body).Runtime.replace(/\D/g,'');
       title4 = JSON.parse(body).Title
       callback(err, result)
@@ -70,7 +70,7 @@ function times(req, res, int) {
   }
 
   function runtime8(callback) {
-    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie8, function (err, response, body) {
+    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie8 + '&apikey=eb9fc4d2', function (err, response, body) {
       var result = JSON.parse(body).Runtime.replace(/\D/g,'');
       title4 = JSON.parse(body).Title
       callback(err, result)
@@ -78,7 +78,7 @@ function times(req, res, int) {
   }
 
   function runtime9(callback) {
-    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie9, function (err, response, body) {
+    request.get('http://www.omdbapi.com/\?t\=' + req.body.movie9 + '&apikey=eb9fc4d2', function (err, response, body) {
       var result = JSON.parse(body).Runtime.replace(/\D/g,'');
       title4 = JSON.parse(body).Title
       callback(err, result)
