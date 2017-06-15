@@ -1,3 +1,4 @@
+var jsonfile = require('jsonfile');
 var converter = require('./converter');
 
 function calcTime(timeArr, countsArr) {
@@ -22,6 +23,13 @@ function calcTime(timeArr, countsArr) {
       }
      var convertedTime = converter(totalRuntime, 'min')
      console.log(convertedTime);
+     var file = __dirname + '/time.json';
+     jsonfile.writeFile(file, convertedTime, function (err) {
+       if (err !== null) {
+         console.error(err);
+       }
+     });
+
   }
 
 }
