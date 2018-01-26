@@ -3,7 +3,7 @@ A Single Page Web Application that calculates and displays the total runtime of 
 
 To run:
 
-npm i -g babel-node
+npm install -g babel-cli
 
 npm run build
 
