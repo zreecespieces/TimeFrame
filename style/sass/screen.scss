@@ -7,4 +7,19 @@
 
 $red: #EA4B3E;
 
-body {background-color: $red;}
+body {
+  background-color: $red;
+  position: relative;
+}
+
+#titleLogo {
+  height: auto;
+  width: 75%;
+  position: relative;
+  display:block;
+  margin:auto;
+}
+
+.jumbotron {
+  box-shadow: 0 0 10px black;
+}
