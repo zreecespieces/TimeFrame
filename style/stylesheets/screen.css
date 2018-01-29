@@ -68,7 +68,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 10, ../sass/screen.scss */
-div {
+body {
   background-color: #EA4B3E;
-  color: white;
 }
