@@ -16,10 +16,22 @@ body {
   height: auto;
   width: 75%;
   position: relative;
-  display:block;
-  margin:auto;
+  display: block;
+  margin: auto;
 }
 
 .jumbotron {
   box-shadow: 0 0 10px black;
+  margin-top: 2%;
+  height: 75vh;
+  text-align: center;
+  padding-left: 42%;
+}
+
+#result {
+  margin-top: 2%;
+}
+
+#input {
+  margin-top: 2%;
 }

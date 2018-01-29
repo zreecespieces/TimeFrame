@@ -85,4 +85,18 @@ body {
 /* line 23, ../sass/screen.scss */
 .jumbotron {
   box-shadow: 0 0 10px black;
+  margin-top: 2%;
+  height: 75vh;
+  text-align: center;
+  padding-left: 42%;
+}
+
+/* line 31, ../sass/screen.scss */
+#result {
+  margin-top: 2%;
+}
+
+/* line 35, ../sass/screen.scss */
+#input {
+  margin-top: 2%;
 }

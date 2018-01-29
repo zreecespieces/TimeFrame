@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Sentence from './sentence';
-import Form from './form';
+import Input from './input';
 import Result from './result';
 
 export default class App extends Component {
@@ -12,12 +12,14 @@ export default class App extends Component {
         </div>
         <div className="row">
           <div className="jumbotron col-xs-12">
-            <div className="row">
+            <div id="sentence" className="row">
               <Sentence />
+            </div>
+            <div id="result" className="row">
               <Result />
             </div>
-            <div className="row">
-              <Form />
+            <div id="input" className="row">
+              <Input />
             </div>
           </div>
         </div>
