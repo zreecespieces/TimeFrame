@@ -7,7 +7,7 @@ export const FETCH_RUNTIME = 'FETCH_RUNTIME';
 export const FETCH_SCRIPT = 'FETCH_SCRIPT';
 
 export function fetchRuntime(movie, callback) {
-  const url = `${RUNTIME_URL}t=${movie}`;
+  const url = `${RUNTIME_URL}t=Interstellar`;
   const request = axios.get(url)
   .then(() => callback());
 
@@ -18,12 +18,12 @@ export function fetchRuntime(movie, callback) {
 }
 
 export function fetchScript(movie, callback) {
-  const url = `${SCRIPT_URL}${movie}.html`;
+  const url = `${SCRIPT_URL}Interstellar.html`;
   const request = axios.get(url)
   .then(() => callback());
 
   return {
     type: FETCH_SCRIPT,
-    payload: request;
+    payload: request
   }
 }
