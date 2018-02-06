@@ -23,21 +23,17 @@ class InputFields extends Component {
     return (
       <span className="fields input-group" key={this.props.index}>
 
-        <form onSubmit={this.onFormSubmit}>
           <input
             placeholder="Enter a movie"
             className="form-control"
             value={this.state.movie}
             onChange={this.onMovieChange} />
-        </form>
 
-        <form onSubmit={this.onFormSubmit}>
           <input
             placeholder="Enter a keyword"
             className="form-control"
             value={this.state.keyword}
             onChange={this.onKeywordChange} />
-        </form>
 
       </span>
     );

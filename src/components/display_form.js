@@ -26,18 +26,22 @@ class DisplayForm extends Component {
     this.setState({layerNumber: newLayer });
   }
 
-  onFormSubmit() {
-
+  onFormSubmit(event) {
+    event.preventDefault();
+    this.props.fetchRuntime();
+    this.props.fetchScript();
   }
 
   render(){
     return (
       <div className="col-xs-4">
-        {[...Array(this.state.layerNumber)].map((e, i) =>
-          <InputFields key={i} index={i}/>
-          )}
-        <button className="btn btn-primary" onClick={this.props.fetchRuntime}>Runtime</button>
-        <button className="btn btn-primary" onClick={this.props.fetchScript}>Script</button>
+        <form onSubmit={this.onFormSubmit}>
+          {[...Array(this.state.layerNumber)].map((e, i) =>
+            <InputFields key={i} index={i}/>
+            )}
+          <button type="submit" className="btn btn-primary">Submit</button>
+        </form>
+
         <button className="btn btn-primary" onClick={this.addLayer}>Add Layer</button>
         <button className="btn btn-primary" onClick={this.removeLayer}>Remove Layer</button>
       </div>
