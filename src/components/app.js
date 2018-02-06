@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Sentence from './sentence';
-import Input from './input';
+import DisplayForm from './display_form';
 import Result from './result';
 
 export default class App extends Component {
@@ -18,8 +18,8 @@ export default class App extends Component {
             <div id="result" className="row">
               <Result />
             </div>
-            <div id="input" className="row">
-              <Input />
+            <div id="display_form" className="row">
+              <DisplayForm />
             </div>
           </div>
         </div>
