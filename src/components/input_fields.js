@@ -1,23 +1,42 @@
 import React, { Component } from 'react';
 
-
 class InputFields extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {term: ''};
+    this.state = {keyword: '',
+                  movie: '' };
+
+    this.onMovieChange = this.onMovieChange.bind(this);
+    this.onKeywordChange = this.onKeywordChange.bind(this);
+  }
+
+  onMovieChange(event) {
+    this.setState({ movie: event.target.value });
+  }
+
+  onKeywordChange(event) {
+    this.setState({ keyword: event.target.value });
   }
 
   render() {
     return (
-      <span className="movieFields" key={this.props.index}>
+      <span className="fields input-group" key={this.props.index}>
 
-        <form onSubmit={this.onFormSubmit} className="input-group">
+        <form onSubmit={this.onFormSubmit}>
           <input
             placeholder="Enter a movie"
             className="form-control"
-            value={this.state.term}
-            onChange={this.onInputChange} />
+            value={this.state.movie}
+            onChange={this.onMovieChange} />
+        </form>
+
+        <form onSubmit={this.onFormSubmit}>
+          <input
+            placeholder="Enter a keyword"
+            className="form-control"
+            value={this.state.keyword}
+            onChange={this.onKeywordChange} />
         </form>
 
       </span>

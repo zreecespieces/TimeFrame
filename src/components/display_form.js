@@ -33,13 +33,11 @@ class DisplayForm extends Component {
   render(){
     return (
       <div className="col-xs-4">
-        <button className="btn btn-primary" onClick={this.props.fetchRuntime}>Runtime</button>
-        <button className="btn btn-primary" onClick={this.props.fetchScript}>Script</button>
-
         {[...Array(this.state.layerNumber)].map((e, i) =>
           <InputFields key={i} index={i}/>
           )}
-
+        <button className="btn btn-primary" onClick={this.props.fetchRuntime}>Runtime</button>
+        <button className="btn btn-primary" onClick={this.props.fetchScript}>Script</button>
         <button className="btn btn-primary" onClick={this.addLayer}>Add Layer</button>
         <button className="btn btn-primary" onClick={this.removeLayer}>Remove Layer</button>
       </div>
