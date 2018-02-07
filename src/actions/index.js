@@ -8,8 +8,7 @@ export const FETCH_SCRIPT = 'FETCH_SCRIPT';
 
 export function fetchRuntime(movie, callback) {
   const url = `${RUNTIME_URL}t=${movie}`;
-  const request = axios.get(url)
-  .then(() => callback());
+  const request = axios.get(url);
 
   return {
     type: FETCH_RUNTIME,
@@ -19,8 +18,7 @@ export function fetchRuntime(movie, callback) {
 
 export function fetchScript(movie, keyword, callback) {
   const url = `${SCRIPT_URL}${movie}.html`;
-  const request = axios.get(url)
-  .then(() => callback());
+  const request = axios.get(url);
 
   return {
     type: FETCH_SCRIPT,
