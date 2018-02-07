@@ -40,8 +40,6 @@ class DisplayForm extends Component {
     movies.map((e) =>
       this.props.fetchScript(eval(`values.${e}`))
     );
-  //  this.props.fetchRuntime(values.movie0);
-  //  this.props.fetchScript(values.movie0);
   }
 
   render(){
