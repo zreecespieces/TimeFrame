@@ -27,9 +27,21 @@ class DisplayForm extends Component {
   }
 
   onSubmit(values) {
-    console.log(values);
-    this.props.fetchRuntime(values.movie0);
-    this.props.fetchScript(values.movie0);
+    var movies = [], i = 0, len = this.state.layerNumber;
+    while (++i <= len) movies.push(`movie${i-1}`);
+
+    var keywords = [], i = 0, len = this.state.layerNumber;
+    while (++i <= len) keywords.push(`keyword${i-1}`);
+
+    movies.map((e) =>
+      this.props.fetchRuntime(eval(`values.${e}`))
+    );
+
+    movies.map((e) =>
+      this.props.fetchScript(eval(`values.${e}`))
+    );
+  //  this.props.fetchRuntime(values.movie0);
+  //  this.props.fetchScript(values.movie0);
   }
 
   render(){
