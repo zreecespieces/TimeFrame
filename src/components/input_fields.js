@@ -1,43 +1,40 @@
 import React, { Component } from 'react';
+import {Field, reduxForm } from 'redux-form';
 
 class InputFields extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {keyword: '',
-                  movie: '' };
-
-    this.onMovieChange = this.onMovieChange.bind(this);
-    this.onKeywordChange = this.onKeywordChange.bind(this);
-  }
-
-  onMovieChange(event) {
-    this.setState({ movie: event.target.value });
-  }
-
-  onKeywordChange(event) {
-    this.setState({ keyword: event.target.value });
+  renderField(field) {
+    return (
+      <div className='form-group' >
+        <label>{field.label}</label>
+        <input
+          type="text"
+          className="form-control"
+          {...field.input}
+        />
+      </div>
+    );
   }
 
   render() {
     return (
       <span className="fields input-group" key={this.props.index}>
 
-          <input
-            placeholder="Enter a movie"
-            className="form-control"
-            value={this.state.movie}
-            onChange={this.onMovieChange} />
-
-          <input
-            placeholder="Enter a keyword"
-            className="form-control"
-            value={this.state.keyword}
-            onChange={this.onKeywordChange} />
+          <Field
+            label="Movie"
+            name={`movie${this.props.index}`}
+            component={this.renderField}
+          />
+          <Field
+            label="Keyword"
+            name={`keyword${this.props.index}`}
+            component={this.renderField}
+          />
 
       </span>
     );
   }
 }
+
+
 
 export default InputFields;

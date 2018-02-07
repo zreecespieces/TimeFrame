@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchRuntime, fetchScript } from '../actions';
@@ -13,7 +14,6 @@ class DisplayForm extends Component {
 
     this.addLayer = this.addLayer.bind(this);
     this.removeLayer = this.removeLayer.bind(this);
-    this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
   addLayer() {
@@ -26,20 +26,21 @@ class DisplayForm extends Component {
     this.setState({layerNumber: newLayer });
   }
 
-  onFormSubmit(event) {
-    event.preventDefault();
-    this.props.fetchRuntime();
-    this.props.fetchScript();
+  onSubmit(values) {
+    console.log(values);
+    this.props.fetchRuntime(values.movie0);
+    this.props.fetchScript(values.movie0);
   }
 
   render(){
+    const { handleSubmit } = this.props;
     return (
       <div className="col-xs-4">
-        <form onSubmit={this.onFormSubmit}>
+        <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
           {[...Array(this.state.layerNumber)].map((e, i) =>
             <InputFields key={i} index={i}/>
             )}
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="submit" className="btn Thebtn-primary">Submit</button>
         </form>
 
         <button className="btn btn-primary" onClick={this.addLayer}>Add Layer</button>
@@ -53,4 +54,8 @@ function mapStateToProps(state) {
   return { state };
 }
 
-export default connect(mapStateToProps, { fetchRuntime, fetchScript })(DisplayForm);
+export default reduxForm({
+  form: 'MovieKeywordForm'
+})(
+  connect(mapStateToProps, { fetchRuntime, fetchScript })(DisplayForm)
+);
