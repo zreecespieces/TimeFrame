@@ -1,11 +1,14 @@
 import {FETCH_RUNTIME, FETCH_SCRIPT} from '../actions';
+import cheerio from 'cheerio';
+import _ from 'lodash';
 
 export default function (state = {}, action) {
   switch(action.type) {
     case FETCH_RUNTIME:
-      console.log(action.payload)
+      console.log(_.get(action.payload.data, 'Runtime'));
     case FETCH_SCRIPT:
-      console.log(action.payload)
+      const $ = cheerio.load(action.payload.data);
+      console.log($('pre').text());
     default:
       return state;
   }
