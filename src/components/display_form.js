@@ -47,7 +47,7 @@ class DisplayForm extends Component {
           {[...Array(this.state.layerNumber)].map((e, i) =>
             <InputFields key={i} index={i}/>
             )}
-          <button type="submit" className="btn Thebtn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary">Submit</button>
         </form>
 
         <button className="btn btn-primary" onClick={this.addLayer}>Add Layer</button>

@@ -26,11 +26,11 @@ export function fetchScript(movie, keyword, callback) {
     const $ = cheerio.load(response.data);
     const script = $('pre').text();
     const keywordOccurence = stringOccurrence(script, keyword);
-    console.log(keywordOccurence);
+    return keywordOccurence;
   });
 
   return {
     type: FETCH_SCRIPT,
-    payload: keywordOccurence
+    payload: request
   }
 }
