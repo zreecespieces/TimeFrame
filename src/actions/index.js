@@ -23,8 +23,7 @@ export function fetchScript(movie, keyword, callback) {
   const request = axios.get(url).then(response => {
     const $ = cheerio.load(response.data);
     const script = $('pre').text();
-    const keywordOccurence = stringOccurrence(script, keyword);
-    return keywordOccurence;
+    return stringOccurrence(script, keyword);
   });
 
   return {
