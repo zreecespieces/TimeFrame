@@ -8,8 +8,6 @@ const SCRIPT_URL = 'http://www.imsdb.com/scripts/';
 export const FETCH_RUNTIME = 'FETCH_RUNTIME';
 export const FETCH_SCRIPT = 'FETCH_SCRIPT';
 
-var keywordOccurence = 0;
-
 export function fetchRuntime(movie, callback) {
   const url = `${RUNTIME_URL}t=${movie}`;
   const request = axios.get(url);
