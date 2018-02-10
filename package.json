@@ -29,6 +29,7 @@
     "axios": "^0.17.1",
     "babel-preset-stage-1": "^6.1.18",
     "cheerio": "^1.0.0-rc.2",
+    "humanize-duration": "^3.12.1",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
