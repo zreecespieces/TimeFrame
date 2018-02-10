@@ -5,8 +5,10 @@ export default function (state = {runtimes: [], keywords: [] }, action) {
   switch(action.type) {
     case FETCH_RUNTIME:
       const runtime = parseInt(_.get(action.payload.data, 'Runtime'));
-      const newState = {...state};
-      newState.runtimes.push(runtime);
+      const newState = {
+        ...state,
+        runtimes: [...state.runtimes, runtime]
+      };
       console.log(newState);
       return newState;
     case FETCH_SCRIPT:
