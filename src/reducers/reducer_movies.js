@@ -4,7 +4,7 @@ import _ from 'lodash';
 export default function (state = {runtimes: [], keywords: [] }, action) {
   switch(action.type) {
     case FETCH_RUNTIME:
-      const runtime = _.get(action.payload.data, 'Runtime');
+      const runtime = parseInt(_.get(action.payload.data, 'Runtime'));
       const newState = {...state};
       newState.runtimes.push(runtime);
       console.log(newState);
