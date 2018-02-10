@@ -9,13 +9,13 @@ export default function (state = {runtimes: [], keywords: [] }, action) {
         ...state,
         runtimes: [...state.runtimes, runtime]
       };
-      console.log(newState);
       return newState;
     case FETCH_SCRIPT:
       const keyword = action.payload;
-      const newerState = {...state};
-      newerState.keywords.push(keyword);
-      console.log(newerState);
+      const newerState = {
+        ...state,
+        keywords: [...state.keywords, keyword]
+      };
       return newerState;
     default:
       return state;

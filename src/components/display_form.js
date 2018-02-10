@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { fetchRuntime, fetchScript } from '../actions';
 
 import InputFields from './input_fields';

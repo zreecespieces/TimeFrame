@@ -6,6 +6,8 @@ class Result extends Component {
     return (
       <div className="col-xs-4">
         This is the runtimes array: {this.props.runtimes}
+        <br />
+        This is the keywords array: {this.props.keywords}
       </div>
     );
   }
