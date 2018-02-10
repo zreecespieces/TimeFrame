@@ -5,13 +5,16 @@ export default function (state = {runtimes: [], keywords: [] }, action) {
   switch(action.type) {
     case FETCH_RUNTIME:
       const runtime = _.get(action.payload.data, 'Runtime');
-      console.log(runtime);
       const newState = {...state};
       newState.runtimes.push(runtime);
       console.log(newState);
       return newState;
     case FETCH_SCRIPT:
-      console.log(action.payload);
+      const keyword = action.payload;
+      const newerState = {...state};
+      newerState.keywords.push(keyword);
+      console.log(newerState);
+      return newerState;
     default:
       return state;
   }
