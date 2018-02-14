@@ -40,6 +40,17 @@ class DisplayForm extends Component {
 
   render(){
     const { handleSubmit } = this.props;
+    const twoButtons = (
+      <div>
+        <button className="btn btn-primary" onClick={this.addLayer}>Add Layer</button>
+        <button className="btn btn-primary" onClick={this.removeLayer}>Remove Layer</button>
+      </div>
+    );
+
+    const oneButton = (
+      <button className="btn btn-primary" onClick={this.addLayer}>Add Layer</button>
+    );
+
     return (
       <div className="col-xs-4">
         <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
@@ -48,9 +59,7 @@ class DisplayForm extends Component {
             )}
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
-
-        <button className="btn btn-primary" onClick={this.addLayer}>Add Layer</button>
-        <button className="btn btn-primary" onClick={this.removeLayer}>Remove Layer</button>
+        {this.state.layerNumber < 3 ? oneButton : twoButtons}
       </div>
     );
   }
