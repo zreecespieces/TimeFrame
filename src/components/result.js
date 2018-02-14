@@ -13,6 +13,8 @@ class Result extends Component {
     const layerRuntimes = runtimes;
     const layerKeywordCount = keywords;
 
+    console.log(layerRuntimes, layerKeywordCount);
+
     var totalRuntime = (layerRuntimes[0] * layerKeywordCount[0]) + layerRuntimes[1];
 
     for (var count = 1; count < runtimes.length - 1; count++) {

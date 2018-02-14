@@ -7,14 +7,14 @@ export default function (state = {runtimes: [], keywords: [] }, action) {
       const runtime = parseInt(_.get(action.payload.data, 'Runtime'));
       const newState = {
         ...state,
-        runtimes: [...state.runtimes, runtime]
+        runtimes: [runtime, ...state.runtimes]
       };
       return newState;
     case FETCH_SCRIPT:
       const keyword = action.payload;
       const newerState = {
         ...state,
-        keywords: [...state.keywords, keyword]
+        keywords: [keyword, ...state.keywords]
       };
       return newerState;
     default:

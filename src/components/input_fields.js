@@ -16,25 +16,36 @@ class InputFields extends Component {
   }
 
   render() {
-    return (
+    const bothFields =
       <span className="fields input-group" key={this.props.index}>
-
-          <Field
+        <Field
             label="Movie"
             name={`movie${this.props.index}`}
             component={this.renderField}
-          />
-          <Field
-            label="Keyword"
-            name={`keyword${this.props.index}`}
-            component={this.renderField}
-          />
+        />
+        <Field
+          label="Keyword"
+          name={`keyword${this.props.index}`}
+          component={this.renderField}
+        />
+      </span>;
 
-      </span>
-    );
+      const singleField =
+        <span className="fields input-group" key={this.props.index}>
+          <Field
+              label="Movie"
+              name={`movie${this.props.index}`}
+              component={this.renderField}
+          />
+        </span>;
+
+      return(
+        <div>
+          {this.props.index == this.props.numberOfMovies ? singleField : bothFields}
+        </div>
+      );
   }
 }
-
 
 
 export default InputFields;

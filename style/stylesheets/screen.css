@@ -100,3 +100,13 @@ body {
 #display_form {
   margin-top: 2%;
 }
+
+/* line 39, ../sass/screen.scss */
+input {
+  background: transparent;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #EA4B3E;
+  -webkit-box-shadow: none;
+  margin-bottom: 20px;
+}
