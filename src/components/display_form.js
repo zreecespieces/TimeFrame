@@ -9,7 +9,7 @@ class DisplayForm extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {layerNumber: 1};
+    this.state = {layerNumber: 2};
 
     this.addLayer = this.addLayer.bind(this);
     this.removeLayer = this.removeLayer.bind(this);
