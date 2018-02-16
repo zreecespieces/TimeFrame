@@ -5,10 +5,12 @@ class Sentence extends Component {
   render(){
     return (
       <div className="col-xs-4" id="sentence">Watching
-        {!this.props.movie0 ?
-            <div>Loading...</div>
+        {!this.props.formValues ?
+            ' '
         :
-            <div>{this.props.movie0.values.movie0}</div>} 
+            <div>{Object.values(this.props.formValues.values).map((e) => {
+              return e;
+            })}</div>}
         blah but every time they say blah it's replaced with blah would take:
       </div>
     );
@@ -17,7 +19,7 @@ class Sentence extends Component {
 
 function mapStateToProps(state) {
   return {
-    movie0: state.form.MovieKeywordForm
+    formValues: state.form.MovieKeywordForm
   }
 }
 

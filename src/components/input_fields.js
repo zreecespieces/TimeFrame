@@ -19,13 +19,11 @@ class InputFields extends Component {
     const bothFields =
       <span className="fields input-group" key={this.props.index}>
         <Field
-            defaultValue="Enter a movie"
             label="Movie"
             name={`movie${this.props.index}`}
             component={this.renderField}
         />
         <Field
-          defaultValue="Enter a keyword"
           label="Keyword"
           name={`keyword${this.props.index}`}
           component={this.renderField}
@@ -35,7 +33,6 @@ class InputFields extends Component {
       const singleField =
         <span className="fields input-group" key={this.props.index}>
           <Field
-              defaultValue="Enter a movie"
               label="Movie"
               name={`movie${this.props.index}`}
               component={this.renderField}
