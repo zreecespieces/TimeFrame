@@ -53,10 +53,11 @@ class DisplayForm extends Component {
 
     return (
       <div className="col-xs-4">
-        <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+        <form className="custom-form" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
           {[...Array(this.state.layerNumber)].map((e, i) =>
             <InputFields key={i} index={i} numberOfMovies={this.state.layerNumber - 1}/>
             )}
+          <br />
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
         {this.state.layerNumber < 3 ? oneButton : twoButtons}

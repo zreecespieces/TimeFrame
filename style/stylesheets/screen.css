@@ -70,10 +70,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 10, ../sass/screen.scss */
 body {
   background-color: #EA4B3E;
-  position: relative;
 }
 
-/* line 15, ../sass/screen.scss */
+/* line 14, ../sass/screen.scss */
 #titleLogo {
   height: auto;
   width: 75%;
@@ -82,31 +81,30 @@ body {
   margin: auto;
 }
 
-/* line 23, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 .jumbotron {
-  box-shadow: 0 0 10px black;
-  margin-top: 2%;
-  height: 75vh;
-  text-align: center;
-  padding-left: 42%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  max-width: 100%;
+  margin: 40px auto 40px;
+  background: white;
+  padding: 40px;
+  border-radius: 4px;
 }
-
-/* line 31, ../sass/screen.scss */
-#result {
-  margin-top: 2%;
+/* line 32, ../sass/screen.scss */
+.jumbotron .form-group {
+  position: relative;
+  padding-top: 16px;
+  margin-bottom: 16px;
 }
-
-/* line 35, ../sass/screen.scss */
-#display_form {
-  margin-top: 2%;
-}
-
-/* line 39, ../sass/screen.scss */
-input {
-  background: transparent;
-  border: none;
-  border-radius: 0px;
-  border-bottom: 1px solid #EA4B3E;
-  -webkit-box-shadow: none;
-  margin-bottom: 20px;
+/* line 36, ../sass/screen.scss */
+.jumbotron .form-group .form-control {
+  position: relative;
+  z-index: 1;
+  border-radius: 0;
+  border-width: 0 0 1px;
+  border-bottom-color: #EA4B3E;
+  height: auto;
+  padding: 3px 0 5px;
 }
