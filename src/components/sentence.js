@@ -37,6 +37,8 @@ class Sentence extends Component {
               return this.props.formValues.values[e];
             })}
           </div>}
+        <br />
+        would take:
       </div>
     );
   }
