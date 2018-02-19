@@ -41,26 +41,28 @@ class DisplayForm extends Component {
   render(){
     const { handleSubmit } = this.props;
     const twoButtons = (
-      <div>
-        <button className="btn btn-primary" onClick={this.addLayer}>Add Layer</button>
-        <button className="btn btn-primary" onClick={this.removeLayer}>Remove Layer</button>
+      <div className="btn-group" role="group">
+        <button type="button" className="btn btn-secondary" onClick={this.addLayer}>Add Layer</button>
+        <button type="button" className="btn btn-secondary" onClick={this.removeLayer}>Remove Layer</button>
       </div>
     );
 
     const oneButton = (
-      <button className="btn btn-primary" onClick={this.addLayer}>Add Layer</button>
+      <button className="btn btn-secondary" onClick={this.addLayer}>Add Layer</button>
     );
 
     return (
-      <div className="col-xs-4">
-        <form className="custom-form" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+      <div className="custom-form" className="col-xs-4">
+        <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
           {[...Array(this.state.layerNumber)].map((e, i) =>
             <InputFields key={i} index={i} numberOfMovies={this.state.layerNumber - 1}/>
             )}
           <br />
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <div className="btn-group" role="group">
+            {this.state.layerNumber < 3 ? oneButton : twoButtons}
+            <button type="submit" className="btn btn-secondary">Submit</button>
+          </div>
         </form>
-        {this.state.layerNumber < 3 ? oneButton : twoButtons}
       </div>
     );
   }

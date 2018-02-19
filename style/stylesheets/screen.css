@@ -108,3 +108,8 @@ body {
   height: auto;
   padding: 3px 0 5px;
 }
+
+/* line 48, ../sass/screen.scss */
+.custom-form {
+  max-width: 100%;
+}
