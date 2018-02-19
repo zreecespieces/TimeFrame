@@ -21,7 +21,7 @@ class Sentence extends Component {
             })}
           </div>}
         {!this.props.formValues ?
-          ' '
+          'timeframe lets you calculate how long it would take to watch any number of movies nested inside of each other at certain keywords. For example, how long would it take for you to watch The Ant Movie, but every time they said the word ant, you paused the movie and played the entire Bee Movie, and then went back to The Ant Movie until the next time they said ant, and again and again until The Ant Movie was finished. Try this example or any combination of your own!'
         :
           <div>Watching
             {allMovies.map((e, i) => {
