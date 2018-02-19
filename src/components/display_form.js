@@ -52,10 +52,10 @@ class DisplayForm extends Component {
     );
 
     return (
-      <div id="display_form" className="col-xs-12">
+      <div id="display_form" className="form-inline col-xs-12">
         <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
           {[...Array(this.state.layerNumber)].map((e, i) =>
-            <InputFields key={i} index={i} numberOfMovies={this.state.layerNumber - 1}/>
+            <InputFields id="input_fields" key={i} index={i} numberOfMovies={this.state.layerNumber - 1}/>
             )}
           <br />
           <div className="btn-group" role="group">

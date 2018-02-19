@@ -15,9 +15,12 @@ export default class App extends Component {
             <div id="sentence" className="row">
               <Sentence />
             </div>
+            <br />
             <div id="result" className="row">
               <Result />
             </div>
+            <br />
+            <br />
             <div id="display_form" className="row">
               <DisplayForm />
             </div>
