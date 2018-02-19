@@ -17,8 +17,26 @@ class Sentence extends Component {
               } else {
                 allKeywords.push(e);
               }
-            })}{`The movies are: ${allMovies}, and the keywords are: ${allKeywords}`}</div>}
-        blah but every time they say blah it's replaced with blah would take:
+            })}</div>}
+        {"Movies:"}
+        {!this.props.formValues ?
+          ' '
+        :
+          <div>
+            {allMovies.map((e, i) => {
+              return this.props.formValues.values[e];
+            })}
+          </div>}
+      <br />
+        {`Keywords:`}
+        {!this.props.formValues ?
+          ' '
+        :
+          <div>
+            {allKeywords.map((e, i) => {
+              return this.props.formValues.values[e];
+            })}
+          </div>}
       </div>
     );
   }
