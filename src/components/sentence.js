@@ -22,7 +22,7 @@ class Sentence extends Component {
           </div>}
         {!this.props.formValues ?
           <div>
-            <span className="red-text">timeframe </span>lets you calculate how long it would take to watch any number of movies nested inside of each other at certain keywords. For example, how long would it take for you to watch <span className="red-text">The Ant Movie</span>, but every time they said the word <span className="red-text">ant</span>, you paused the movie and played the entire <span className="red-text">Bee Movie</span>, and then went back to <span className="red-text">The Ant Movie</span> until the next time they said <span className="red-text">ant</span>, and again and again until <span className="red-text">The Ant Movie</span> was finished. Try this example or any combination of your own!
+            <span className="red-text">timeframe </span>lets you calculate how long it would take to watch any number of movies nested inside of each other at certain keywords. For example, how long would it take for you to watch <span className="red-text">Interstellar</span>, but every time they said the word <span className="red-text">space</span>, you paused the movie and watched <span className="red-text">Deadpool</span>, and then went back to <span className="red-text">Interstellar</span> until the next time they said <span className="red-text">space</span>, and again and again until <span className="red-text">Interstellar</span> was finished. Try this example or any combination of your own!
           </div>
         :
           <div>Watching
