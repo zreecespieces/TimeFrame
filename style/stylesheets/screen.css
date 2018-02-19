@@ -123,4 +123,5 @@ form {
 /* line 56, ../sass/screen.scss */
 input {
   margin-left: 5px;
+  text-align: center;
 }
