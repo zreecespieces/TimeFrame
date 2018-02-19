@@ -23,7 +23,7 @@ class Result extends Component {
 
   render(){
     return (
-      <div id="result" className="col-xs-4">
+      <div id="result">
         {this.findResult(this.props.runtimes, this.props.keywords)}
       </div>
     );

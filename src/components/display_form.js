@@ -52,7 +52,7 @@ class DisplayForm extends Component {
     );
 
     return (
-      <div className="custom-form" className="col-xs-4">
+      <div id="display_form" className="col-xs-12">
         <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
           {[...Array(this.state.layerNumber)].map((e, i) =>
             <InputFields key={i} index={i} numberOfMovies={this.state.layerNumber - 1}/>

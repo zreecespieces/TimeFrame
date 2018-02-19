@@ -7,6 +7,10 @@
 
 $red: #EA4B3E;
 
+.red-text {
+  color: $red;
+}
+
 body {
   background-color: $red;
 }
@@ -19,20 +23,20 @@ body {
   margin: auto;
 }
 
+#sentence {
+  max-width: 100%;
+}
+
 .jumbotron {
 
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
   max-width: 100%;
-  margin: 40px auto 40px;
   background: white;
-  padding: 40px;
   border-radius: 4px;
   .form-group {
     position: relative;
-    padding-top: 16px;
-    margin-bottom: 16px;
     .form-control {
       position: relative;
       z-index: 1;
@@ -40,11 +44,11 @@ body {
       border-width: 0 0 1px;
       border-bottom-color: $red;
       height: auto;
-      padding: 3px 0 5px;
     }
   }
 }
 
-.custom-form {
-  max-width: 100%;
+form {
+    display: inline-block;
+    text-align: center;
 }

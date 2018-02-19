@@ -11,7 +11,7 @@ export default class App extends Component {
           <img src="/src/img/title.png" className="img-fluid" alt="Responsive image"/>
         </div>
         <div className="row">
-          <div className="jumbotron col-xs-12">
+          <div className="jumbotron text-xs-center">
             <div id="sentence" className="row">
               <Sentence />
             </div>
