@@ -8,7 +8,7 @@ export default class App extends Component {
     return (
       <div id="wrapper">
         <div id="titleLogo" className="row">
-          <img src="/src/img/title.png" className="img-fluid" alt="Responsive image"/>
+          <img src="https://i.imgur.com/8CEPWYu.png" className="img-fluid" alt="Responsive image"/>
         </div>
         <div className="row">
           <div className="jumbotron text-xs-center">
