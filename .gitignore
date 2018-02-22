@@ -1,7 +1,6 @@
 /node_modules
 style/.sass-cache
 style/.sass-cache/*
-bundle.js
 npm-debug.log
 .DS_Store
 
