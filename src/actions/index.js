@@ -2,8 +2,8 @@ import axios from 'axios';
 import cheerio from 'cheerio';
 import stringOccurrence from 'string-occurrence';
 
-const RUNTIME_URL = 'http://www.omdbapi.com/?apikey=eb9fc4d2&';
-const SCRIPT_URL = 'http://www.imsdb.com/scripts/';
+const RUNTIME_URL = 'https://www.omdbapi.com/?apikey=eb9fc4d2&';
+const SCRIPT_URL = 'https://cors-anywhere.herokuapp.com/http://www.imsdb.com/scripts/';
 
 export const FETCH_RUNTIME = 'FETCH_RUNTIME';
 export const FETCH_SCRIPT = 'FETCH_SCRIPT';
