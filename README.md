@@ -10,10 +10,10 @@ You also will need to enable CORS in your local browser for the API requests to 
 
 <p>This web application utilizes the Open Movie Database API to grab the lengths of movies, and the Internet Movie Script Database to find how many times a certain word is said in that movie, and then crunches the numbers.</p>
 <h4>Known Issues:</h4>
-Because of the async nature of this app, I had a hard time controlling when the responses were received, so I couldn't ensure the data will be in the same order every time, resulting in different answers.
+<p>Because of the async nature of this app, I had a hard time controlling when the responses were received, so I couldn't ensure the data will be in the same order every time, resulting in different answers.</p>
 
-If at first after you press submit nothing happens, go to http://www.imsdb.com/ and see if they have all the movies you're trying to search, as it is the smaller of the two databases and so will be the limiting factor.
+<p>If at first after you press submit nothing happens, go to http://www.imsdb.com/ and see if they have all the movies you're trying to search, as it is the smaller of the two databases and so will be the limiting factor.</p>
 
-If visiting the project hosted on GitHub pages, the result will never do anything because GitHub blocks CORS. The same problem occurs with local testing if you don't have the CORS Chrome extension.
+<p>If visiting the project hosted on GitHub pages, the result will never do anything because GitHub blocks CORS. The same problem occurs with local testing if you don't have the CORS Chrome extension.</p>
 
-Titles with spaces in them need to be substituted with hyphens.
+<p>Titles with spaces in them need to be substituted with hyphens.</p>
