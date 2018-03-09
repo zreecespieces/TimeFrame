@@ -1,7 +1,8 @@
 ![timeframe logo](https://i.imgur.com/dU2lgU0.png)
-<h2>Timeframe</h2>
-https://zreecespieces.github.io/Timeframe/
+<h2>https://zreecespieces.github.io/Timeframe/</h2>
+
 Build the project using <code>npm start</code> and visit <code>localhost:8080</code> in the browser.
+
 You also will need to enable CORS in your local browser for the API requests to go through.
 <h4>Description</h4>
 Timeframe has a bit of history behind it. It starts with this Reddit post: https://www.reddit.com/r/theydidthemath/comments/5g1qzg/request_how_long_would_this_movie_actually_be/dap1h76/
