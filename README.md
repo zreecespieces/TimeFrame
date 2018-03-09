@@ -5,11 +5,10 @@ Build the project using <code>npm start</code> and visit <code>localhost:8080</c
 
 You also will need to enable CORS in your local browser for the API requests to go through.
 <h4>Description</h4>
-Timeframe has a bit of history behind it. It starts with this Reddit post: https://www.reddit.com/r/theydidthemath/comments/5g1qzg/request_how_long_would_this_movie_actually_be/dap1h76/
-<br />
-After that post went viral, many people started submitting questions with the same premise, but different movies. So many people in fact, that the subreddit had to ban those type of questions. That's when I realized that someone could just make a calculator for that, and so over the course of the last year, with a lot of hard work, trial-and-error, and persistence, that's what I've done.
+<p>Timeframe has a bit of history behind it. It starts with this Reddit post: https://www.reddit.com/r/theydidthemath/comments/5g1qzg/request_how_long_would_this_movie_actually_be/dap1h76/</p>
+<p>After that post went viral, many people started submitting questions with the same premise, but different movies. So many people in fact, that the subreddit had to ban those type of questions. That's when I realized that someone could just make a calculator for that, and so over the course of the last year, with a lot of hard work, trial-and-error, and persistence, that's what I've done.</p>
 
-This web application utilizes the Open Movie Database API to grab the lengths of movies, and the Internet Movie Script Database to find how many times a certain word is said in that movie, and then crunches the numbers.
+<p>This web application utilizes the Open Movie Database API to grab the lengths of movies, and the Internet Movie Script Database to find how many times a certain word is said in that movie, and then crunches the numbers.</p>
 <h4>Known Issues:</h4>
 Because of the async nature of this app, I had a hard time controlling when the responses were received, so I couldn't ensure the data will be in the same order every time, resulting in different answers.
 
