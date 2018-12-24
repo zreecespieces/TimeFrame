@@ -1,16 +1,14 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: "source-map",
 
-  entry: [
-    './src/index.js'
-  ],
+  entry: ["./src/index.js"],
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/dist/'
+    path: path.join(__dirname, "dist"),
+    filename: "bundle.js",
+    publicPath: "/dist/"
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
@@ -21,17 +19,17 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [
-      { test: /\.json$/, loader: 'json' },
+    rules: [
       {
-      exclude: /node_modules/,
-      loader: 'babel',
-      query: {
-        presets: ['react', 'es2015', 'stage-1']
+        exclude: /node_modules/,
+        loader: "babel-loader",
+        query: {
+          presets: ["@babel/react"]
+        }
       }
-    }]
+    ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: [".js", ".jsx"]
   }
 };
